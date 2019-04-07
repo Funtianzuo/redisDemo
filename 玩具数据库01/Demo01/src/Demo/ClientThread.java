@@ -10,23 +10,23 @@ public class ClientThread implements Runnable {
 				Scanner s=new Scanner(System.in);
 				String temp = s.nextLine();
 				Socket socket = new Socket("127.0.0.1", 12016);
-				//»ñÈ¡ÊäÈëÊä³öÁ÷
+				//è·å–è¾“å…¥è¾“å‡ºæµ
 				InputStream is = socket.getInputStream();
 				OutputStream os = socket.getOutputStream();
-				//·¢ËÍ
+				//å‘é€
 				os.write(temp.getBytes());
 				os.flush();
-				//½ÓÊÕ
+				//æ¥æ”¶
 				byte[] cache=new byte[1024];
 				is.read(cache);
 				String a=new String(cache);
 				if(temp.equals("show")) {
 					a=a.trim();
-				String[] c=a.split(" ");
-				for(int i=0;i<c.length;i++) {
-					c[i]=c[i].replaceAll(" ", "");
-				}
-				for(int i=0;i<c.length-1;i+=2)
+					String[] c=a.split(" ");
+					for(int i=0;i<c.length;i++) {
+						c[i]=c[i].replaceAll(" ", "");
+					}
+					for(int i=0;i<c.length-1;i+=2)
 					System.out.printf("key:%10s  value:%10s\n",c[i],c[i+1]);
 				}
 				else System.out.println(a);
