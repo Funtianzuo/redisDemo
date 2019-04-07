@@ -1,0 +1,9 @@
+table stu
+fan 90
+li 80
+aa 100
+table color
+table pp
+p 9
+1 2
+5 6

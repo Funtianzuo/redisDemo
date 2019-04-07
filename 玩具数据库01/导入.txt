@@ -1,0 +1,7 @@
+在Eclipse中依次点击：
+
+File -> 
+Import ->
+Existing Projects into Workspace ->
+选择客户端/服务端 ->
+一路next点下去即可
